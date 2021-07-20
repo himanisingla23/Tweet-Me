@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel ="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 
 </head>
 <body>
     <div id="container">
-        <div id="inner">
+        <div id="inner" data-aos="fade-down-right">
             <div id="box">
                 <p id="number">
                     <img 
@@ -23,7 +24,8 @@
                 <div id="quotes" >
                     <i class="start-quote fas fa-quote-left" ></i>
                     <p id ="text" class="text" ></p>
-                    <p id="author" class="author">~</p>
+                    <br>
+                    <p id="author" class="author"></p>
                 </div> 
                 <label class="button">
                     <p id="newQuote">New Quote</p>
@@ -34,8 +36,9 @@
     </div> 
 
     
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init();
         const quotes = document.getElementById("text");
         const author = document.getElementById("author");
         const newQuote = document.getElementById("newQuote");
